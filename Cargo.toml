@@ -1,0 +1,19 @@
+[package]
+name = "http-header-to-hash-filter"
+version = "0.1.0"
+edition = "2021"
+authors = ["Harsimran Singh Maan <maan.harry@gmail.com>"]
+description = "Wasm filter for proxies to convert a header value to a hashed value."
+readme = "README.md"
+license = "Apache-2.0"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+proxy-wasm = "0.2.0"
+log = "0.4.17"
+hmac = "0.12.1"
+sha2 = "0.10.2"
+hex = "0.4.3"
+[lib]
+# https://github.com/rust-lang/rfcs/blob/master/text/1510-cdylib.md
+crate-type = ["cdylib"]
